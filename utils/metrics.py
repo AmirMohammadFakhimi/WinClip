@@ -56,7 +56,7 @@ def cal_pro_metric(labeled_imgs, score_imgs, fpr_thresh=0.3, max_steps=200):
     labeled_imgs = np.array(labeled_imgs)
     labeled_imgs[labeled_imgs <= 0.45] = 0
     labeled_imgs[labeled_imgs > 0.45] = 1
-    labeled_imgs = labeled_imgs.astype(np.bool)
+    labeled_imgs = labeled_imgs.astype(bool)
 
     max_th = score_imgs.max()
     min_th = score_imgs.min()
